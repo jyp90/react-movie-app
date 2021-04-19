@@ -44,7 +44,8 @@ Result: .eslintrc.json
 
 ```
 "rules" : {
-  + "no-console" : "off"
+  + "no-console" : "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
 }
 ```
 
