@@ -3,6 +3,7 @@ import React from "react";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    console.log("constructor");
     this.state = {
       count: 0,
     };
@@ -13,6 +14,13 @@ class App extends React.Component {
   minus = () => {
     this.setState((current) => ({ count: current.count - 1 }));
   };
+  componentDidMount() {
+    console.log("component rendered");
+  }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("component did updated");
+  }
+
   render() {
     return (
       <div>
