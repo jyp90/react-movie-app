@@ -1,4 +1,7 @@
-import Potato from "./Potato";
+function Food(props) {
+    console.log(props);
+    return <h3>I like Potato</h3>
+}
 
 function App() {
   return (
@@ -6,7 +9,7 @@ function App() {
       <h1>
         Hello Nyong!! 2021 !!
       </h1>
-        <Potato />
+        <Food fav="kimchi" something={true} arrays={["Hello", 1, 2, 3, 4, true]}/>
     </div>
   );
 }
