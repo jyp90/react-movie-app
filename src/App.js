@@ -1,3 +1,4 @@
+import Potato from "./Potato";
 
 function App() {
   return (
@@ -5,6 +6,7 @@ function App() {
       <h1>
         Hello Nyong!! 2021 !!
       </h1>
+        <Potato />
     </div>
   );
 }
