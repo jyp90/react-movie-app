@@ -1,6 +1,5 @@
-function Food({ fav }) {
-    console.log(fav);
-    return <h3>I like {fav}</h3>
+function Food(props) {
+    return <h3>I like {props.fav}</h3>
 }
 
 function App() {
