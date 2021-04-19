@@ -1,6 +1,6 @@
-function Food(props) {
-    console.log(props);
-    return <h3>I like Potato</h3>
+function Food({ fav }) {
+    console.log(fav);
+    return <h3>I like {fav}</h3>
 }
 
 function App() {
@@ -9,7 +9,10 @@ function App() {
       <h1>
         Hello Nyong!! 2021 !!
       </h1>
-        <Food fav="kimchi" something={true} arrays={["Hello", 1, 2, 3, 4, true]}/>
+        <Food fav="kimchi"/>
+        <Food fav="ramen"/>
+        <Food fav="samgiopsal"/>
+        <Food fav="chukumi"/>
     </div>
   );
 }
