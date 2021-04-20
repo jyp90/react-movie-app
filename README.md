@@ -2,6 +2,9 @@
 
 Create new app for Web Study
 
+## Environment
+MacOS Big Sur / WebStorm
+
 ## Create Application Command Line
 
 $ npx create-react-app nyong_sample_2021
@@ -114,3 +117,7 @@ $ npm i --save-dev eslint-config-prettier
 }
 
 ```
+
+## Install Axios 
+
+$ npm i axios
