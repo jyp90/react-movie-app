@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Movie from "./Movie";
+import "App.css";
 
 let get_movies_url = "https://yts-proxy.nomadcoders1.now.sh/list_movies.json";
 let sort_param = "?sort_by=rating";
@@ -27,21 +28,24 @@ class App extends React.Component {
     const { isLoading, movies } = this.state;
     return (
       <div>
-        {isLoading
-          ? "Loading..."
-          : movies.map((movie) => {
-              console.log(movie);
-              return (
-                <Movie
-                  key={movie.id}
-                  id={movie.id}
-                  year={movie.year}
-                  title={movie.title}
-                  summary={movie.summary}
-                  poster={movie.medium_cover_image}
-                />
-              );
-            })}
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader__text">Loading...</span>
+          </div>
+        ) : (
+          <div className="movies">
+            {movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
+              />
+            ))}
+          </div>
+        )}
       </div>
     );
   }
