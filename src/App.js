@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Movie from "./Movie";
-import "App.css";
+import "./App.css";
 
 let get_movies_url = "https://yts-proxy.nomadcoders1.now.sh/list_movies.json";
 let sort_param = "?sort_by=rating";
@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     const { isLoading, movies } = this.state;
     return (
-      <div>
+      <section className="container">
         {isLoading ? (
           <div className="loader">
             <span className="loader__text">Loading...</span>
@@ -42,11 +42,12 @@ class App extends React.Component {
                 title={movie.title}
                 summary={movie.summary}
                 poster={movie.medium_cover_image}
+                genres={movie.genres}
               />
             ))}
           </div>
         )}
-      </div>
+      </section>
     );
   }
 }
